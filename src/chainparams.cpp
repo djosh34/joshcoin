@@ -104,9 +104,19 @@ public:
         string nonce = "0x0000000000000000000000000000000000000000000000000000000000000000";
         nonce.replace(nonce.begin()+64,nonce.end()+66,str);
 
+
+
+
         genesis.nNonce   = uint256S(nonce.c_str());
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "Nonce: %s\n Nonce: %s hashGenesisBlock: %s\n",nonce.c_str(),genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
+        if ("0" == consensus.hashGenesisBlock.ToString().c_str()[2]){
+              fprintf(stderr, "FoundNonce: %s\n",genesis.nNonce.ToString().c_str());
+
+
+              //if ("0" == nonce.c_str()[3]){
+              //}
+        }
 
         }
 
