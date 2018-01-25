@@ -101,7 +101,8 @@ public:
         stringstream ss;
         ss << i;
         string str = ss.str();
-        printf ("hexadecimal: %s\n",str.c_str());
+        string nonce = "0x" + str;
+        genesis.nNonce   = uint256S(nonce.c_str())
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "Nonce: %s  hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
 
