@@ -97,11 +97,11 @@ public:
 
         while(true)
         {
-        int i;
-        i = 10
-        char buffer [33];
-        itoa (i,buffer,16);
-        printf ("hexadecimal: %s\n",buffer);
+        int i = 10;
+        stringstream ss;
+        ss << a;
+        string str = ss.str();
+        printf ("hexadecimal: %s\n",str);
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "Nonce: %s  hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
 
