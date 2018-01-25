@@ -100,7 +100,7 @@ public:
         int i = 10;
         stringstream ss;
         ss << i;
-        string str = ss.ToString().c_str();
+        string str = ss.c_str();
         printf ("hexadecimal: %s\n",str);
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "Nonce: %s  hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
