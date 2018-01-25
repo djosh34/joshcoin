@@ -109,11 +109,8 @@ public:
 
         genesis.nNonce   = uint256S(nonce.c_str());
         consensus.hashGenesisBlock = genesis.GetHash();
-        fprintf(stderr, "Nonce: %s\n Nonce: %s hashGenesisBlock: %s\n",nonce.c_str(),genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
-        if ("0" == consensus.hashGenesisBlock.ToString().c_str()[0]){
+        fprintf(stderr, "Nonce: %s hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
 
-              fprintf(stderr, "FoundNonce: %s\n",genesis.nNonce.ToString().c_str());
-            }
 
         }
 
