@@ -94,10 +94,10 @@ public:
 
 
         genesis.nNonce   = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
-
+        int i = 10;
         while(true)
         {
-        int i = 10;
+        i = i + 1;
         stringstream ss;
         ss << i;
         string str = ss.str();
