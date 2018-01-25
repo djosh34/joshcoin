@@ -5,6 +5,7 @@
 
 #include "main.h"
 #include "crypto/equihash.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "util.h"
@@ -97,7 +98,7 @@ public:
         while(true)
         {
         int i;
-        i = 10;
+        i = 10
         char buffer [33];
         itoa (i,buffer,16);
         printf ("hexadecimal: %s\n",buffer);
