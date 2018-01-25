@@ -95,7 +95,7 @@ public:
         
         while(true)
         {
-        genesis.nNonce = genesis.nNonce + uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
+        genesis.nNonce = genesis.nNonce + 1;
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "Nonce: %s  hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
         
