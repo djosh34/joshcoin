@@ -122,6 +122,7 @@ public:
 
         assert(genesis.hashMerkleRoot == uint256S("0x81da098d7374b96a7d1d0aedb7ce01425a34eb9315850d7f5b6ece080ff06450"));
         assert(consensus.hashGenesisBlock == uint256S("0x000a3f69afd74c49df37f00a123dc8fbbba1a6647a45ec4d193b407543c248c2"));
+        assert(genesis.hashMerkleRoot == uint256S("0x80da098d7374b96a7d1d0aedb7ce01425a34eb9315850d7f5b6ece080ff06450"));// wrong one 
 
         vFixedSeeds.clear();
         vSeeds.clear();
