@@ -101,10 +101,12 @@ public:
         stringstream ss;
         ss << i;
         string str = ss.str();
-        string nonce = "0x" + str;
+        string nonce = "0x0000000000000000000000000000000000000000000000000000000000000000";
+        nonce.replace(nonce.begin()+64,nonce.end()+66,str);
+
         genesis.nNonce   = uint256S(nonce.c_str());
         consensus.hashGenesisBlock = genesis.GetHash();
-        fprintf(stderr, "Nonce: %s  hashGenesisBlock: %s\n",genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
+        fprintf(stderr, "Nonce: %s\n Nonce: %s hashGenesisBlock: %s\n",nonce,genesis.nNonce.ToString().c_str(), consensus.hashGenesisBlock.ToString().c_str());
 
         }
 
