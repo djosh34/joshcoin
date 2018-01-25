@@ -93,7 +93,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         fprintf(stderr, "hashMerkleRoot: %s\n",genesis.hashMerkleRoot.ToString().c_str());
         fprintf(stderr, "hashGenesisBlock: %s\n",consensus.hashGenesisBlock.ToString().c_str());
-        assert(genesis.hashMerkleRoot == uint256S("0x5064f00f08ce6e5b7f0d851593eb345a4201ceb7ed0a1d7d6ab974738d09da81"));
+        assert(genesis.hashMerkleRoot == uint256S("0x81da098d7374b96a7d1d0aedb7ce01425a34eb9315850d7f5b6ece080ff06450"));
         //assert(consensus.hashGenesisBlock == uint256S("0x0007104ccda289427919efc39dc9e4d499804b7bebc22df55f8b834301260602"));
 
         vFixedSeeds.clear();
